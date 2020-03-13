@@ -6,6 +6,9 @@
 # bash-completion with sudo
 complete -cf sudo
 
+# vi edit mode
+set -o vi
+
 # more bash settings
 bind "set completion-ignore-case on"
 bind "set completion-map-case on"
