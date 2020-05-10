@@ -15,12 +15,19 @@ zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
+autoload -Uz vcs_info
+function precmd() { vcs_info }
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b' 
 # match uppercase from lowercase
 zstyle ':completion:*'                 matcher-list 'm:{a-z}={A-Z}'
+
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' formats '%F{yellow}[%b%F{red}%u%F{cyan}%c%F{yellow}] '
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
@@ -50,15 +57,5 @@ ssh_host() {
 	fi
 }
 
-git_branch() {
-	# show git branch
-	branch=$( git branch 2>/dev/null | grep '^*' | colrm 1 2 )
-	if [ -n "$branch" ]
-	then
-		echo "[$branch] "
-	else
-		echo ""
-	fi
-}
 
-PS1=$(ssh_host)'%B%F{yellow} %1~ %b$(git_branch)%B%F{blue}>%F{green}>%F{yellow}>%b%F{white} '
+PS1=$(ssh_host)'%B%F{yellow} %1~ %b${vcs_info_msg_0_}%B%F{blue}>%F{green}>%F{yellow}>%b%F{white} '
