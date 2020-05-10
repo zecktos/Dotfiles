@@ -11,7 +11,7 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 unsetopt beep
 
-zstyle :compinstall filename '/home/nico/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
