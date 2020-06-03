@@ -1,0 +1,12 @@
+configuration {
+/* 			bg           fg      bgalt      hlbg     hlfg */
+	color-normal: "#00303030, #fda331, #00303030, #fda331, #303030" ;
+	color-urgent: "#00303030, #fb0120, #00303030, #fb0120, #303030";	
+	color-active: "#00303030, #268bd2, #00303030, #fda331, #268bd2";
+	
+
+/*			background    border  seperator  */
+	color-window: "#b1000000, #b1000000, #a1c659";
+
+
+}
