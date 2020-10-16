@@ -2,7 +2,7 @@
 set nocompatible
 filetype plugin on
 filetype indent on
-au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab shiftround textwidth=79 
+au Filetype python set tabstop=4 softtabstop=4 shiftwidth=4 expandtab shiftround textwidth=79 
 set autoindent
 
 "-----navigate-with-vim-movements--------
