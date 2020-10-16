@@ -45,7 +45,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 "-----ALE-------------------
 let g:ale_set_highlights = 0
 let g:ale_sign_error = '▶'
-let g:ale_sign_warning = '⚫'
+let g:ale_sign_warning = '🞄'
 
 highlight ALEErrorSign ctermfg=red
 highlight ALEWarningSign ctermfg=blue
