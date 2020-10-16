@@ -19,6 +19,7 @@ set ruler
 set cursorline
 
 highlight Normal ctermbg=none
+highlight SignColumn ctermbg=none
 
 highlight CursorLine cterm=none
 highlight CursorLineNr cterm=bold ctermfg=white ctermbg=none
@@ -41,12 +42,19 @@ autocmd InsertLeave * highlight  CursorLineNr ctermfg=white ctermbg=none
 command Tree NERDTreeToggle
 autocmd vimenter * if !argc() | NERDTree | endif
 
-"-----YouCompleteMe----------
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_python_interpreter_path = ''
-let g:ycm_python_sys_path = []
-let g:ycm_extra_conf_vim_data = [
-  \  'g:ycm_python_interpreter_path',
-  \  'g:ycm_python_sys_path'
-  \]
-let g:ycm_global_ycm_extra_conf = '~/.global_extra_conf.py'
+"-----ALE-------------------
+let g:ale_set_highlights = 0
+let g:ale_sign_error = '▶'
+let g:ale_sign_warning = '⚫'
+
+highlight ALEErrorSign ctermfg=red
+highlight ALEWarningSign ctermfg=blue
+
+nnoremap gd :ALEGoToDefinition<CR>
+nnoremap gr :ALEFindReferences<CR>
+
+let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\  'python': ['pyls'],
+\}
+
