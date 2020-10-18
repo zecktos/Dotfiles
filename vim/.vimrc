@@ -4,6 +4,7 @@ filetype plugin on
 filetype indent on
 au Filetype python set tabstop=4 softtabstop=4 shiftwidth=4 expandtab shiftround textwidth=79 
 set autoindent
+set encoding=utf-8
 
 "-----navigate-with-vim-movements--------
 nnoremap <C-J> <C-W><C-J>
@@ -45,7 +46,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 "-----ALE-------------------
 let g:ale_set_highlights = 0
 let g:ale_sign_error = '▶'
-let g:ale_sign_warning = '🞄'
+let g:ale_sign_warning = '⚬'
 
 highlight ALEErrorSign ctermfg=red
 highlight ALEWarningSign ctermfg=blue
