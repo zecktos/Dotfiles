@@ -7,7 +7,7 @@
 complete -cf sudo
 
 # vi edit mode
-set -o vi
+# set -o vi
 
 # more bash settings
 bind "set completion-ignore-case on"
