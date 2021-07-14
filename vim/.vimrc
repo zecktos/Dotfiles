@@ -55,8 +55,20 @@ highlight ALEWarningSign ctermfg=blue
 nnoremap gd :ALEGoToDefinition<CR>
 nnoremap gr :ALEFindReferences<CR>
 
+inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    
+\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
+
+
+let g:OmniSharp_highlight_groups = {
+\ 'ClassName': 'Type',
+\}
+
+let g:OmniSharp_server_use_mono = 1
+autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \  'python': ['pyls'],
+\  'cs': ['OmniSharp']
 \}
 
