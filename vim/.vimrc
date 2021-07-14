@@ -2,7 +2,8 @@
 set nocompatible
 filetype plugin on
 filetype indent on
-au Filetype python set tabstop=4 softtabstop=4 shiftwidth=4 expandtab shiftround textwidth=79 
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
+au Filetype python set shiftround textwidth=79 
 set autoindent
 set encoding=utf-8
 
