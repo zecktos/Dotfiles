@@ -68,7 +68,9 @@ autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
-\  'python': ['pyls'],
+\  'python': ['pylsp'],
 \  'cs': ['OmniSharp']
 \}
 
+"-------fix--------------------
+autocmd! BufNewFile,BufRead *.frag,*.vert set ft=glsl

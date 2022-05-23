@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "omnisharp.monoPath": "/bin/mono",
+    "csharp.suppressDotnetInstallWarning": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.useGlobalMono": "always",
+    "editor.tabCompletion": "on",
+    "editor.fontFamily": "'Hack'",
+    "git.enableSmartCommit": true,
+    "vim.vimrc.enable": true
+}
