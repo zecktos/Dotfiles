@@ -37,11 +37,6 @@ alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -l'
 
-alias processing-run='processing-java --sketch=$PWD  --run'
-
-alias blank='xset dpms force off'
-
-alias todo-ed='vim .todo.txt'
 
 cddir() {
 	# make directory and cd into it
