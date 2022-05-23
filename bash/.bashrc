@@ -19,6 +19,7 @@ shopt -s cdspell
 
 alias ls='ls --color=auto'
 alias la='ls -a'
+alias ll='ls -l'
 
 cddir() {
 	# make directory and cd into it

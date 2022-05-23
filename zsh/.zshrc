@@ -35,6 +35,7 @@ bindkey '^R' history-incremental-search-backward
 # some shortcuts
 alias ls='ls --color=auto'
 alias la='ls -a'
+alias ll='ls -l'
 
 alias processing-run='processing-java --sketch=$PWD  --run'
 
