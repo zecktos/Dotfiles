@@ -20,7 +20,7 @@ shopt -s cdspell
 alias ls='ls --color=auto'
 alias la='ls -a'
 
-mkdircd() {
+cddir() {
 	# make directory and cd into it
 	mkdir -p "$@" && cd "$@"
 }

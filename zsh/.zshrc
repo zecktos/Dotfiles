@@ -42,7 +42,7 @@ alias blank='xset dpms force off'
 
 alias todo-ed='vim .todo.txt'
 
-mkdircd() {
+cddir() {
 	# make directory and cd into it
 	mkdir -p "$@" && cd "$@"
 }
