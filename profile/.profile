@@ -27,3 +27,13 @@ fi
 export VISUAL=vi
 export EDITOR="$VISUAL"
 
+# source env variables 
+if [ -f "$HOME/.env" ]; then
+	. "$HOME/.env"
+fi
+
+# run commands in custom autostart script
+if [ -f "$HOME/.config/autostart.sh" ]; then
+	$HOME/.config/autostart.sh &
+fi
+
