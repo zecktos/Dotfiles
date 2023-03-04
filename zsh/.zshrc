@@ -24,6 +24,12 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 # match uppercase from lowercase
 zstyle ':completion:*'                 matcher-list 'm:{a-z}={A-Z}'
 
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '!'
 zstyle ':vcs_info:*' stagedstr '+'
