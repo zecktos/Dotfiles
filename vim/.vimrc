@@ -15,7 +15,6 @@ nnoremap <C-H> <C-W><C-H>
 
 "-----visuals---------------
 syntax on
-color torte
 set number
 set ruler
 set cursorline
@@ -32,7 +31,7 @@ highlight StatusLineNC ctermfg=white ctermbg=none cterm=none
 highlight VertSplit cterm=none 
 
 highlight Pmenu ctermbg=none ctermfg=cyan
-highlight PmenuSel ctermbg=darkgrey ctermfg=fg
+highlight PmenuSel ctermbg=darkgrey ctermfg=white
 
 " Change Color when entering Insert Mode
 autocmd InsertEnter * highlight  CursorLineNr ctermfg=red ctermbg=none
