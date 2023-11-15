@@ -9,5 +9,7 @@
     "editor.tabCompletion": "on",
     "editor.fontFamily": "'Hack'",
     "git.enableSmartCommit": true,
-    "vim.vimrc.enable": true
+    "vim.vimrc.enable": true,
+    "redhat.telemetry.enabled": false,
+    "editor.fastScrollSensitivity": 6
 }
