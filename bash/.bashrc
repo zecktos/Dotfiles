@@ -18,6 +18,8 @@ shopt -s dirspell
 shopt -s cdspell
 
 alias ls='ls --color=auto'
+# remove bg color for dir with "other-writable", change to bold color instead
+LS_COLORS=$LS_COLORS:'tw=00;33:ow=01;33:'; export LS_COLORS
 alias la='ls -a'
 alias ll='ls -l'
 
