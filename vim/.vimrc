@@ -42,34 +42,3 @@ autocmd InsertLeave * highlight  CursorLineNr ctermfg=white ctermbg=none
 "open NERDTree whenn opening vim without file
 command Tree NERDTreeToggle
 autocmd vimenter * if !argc() | NERDTree | endif
-
-"-----ALE-------------------
-let g:ale_set_highlights = 0
-let g:ale_sign_error = '▶'
-let g:ale_sign_warning = '⚬'
-
-highlight ALEErrorSign ctermfg=red
-highlight ALEWarningSign ctermfg=blue
-
-nnoremap gd :ALEGoToDefinition<CR>
-nnoremap gr :ALEFindReferences<CR>
-
-inoremap <expr> <Tab> pumvisible() ? '<C-n>' :                                                                                                                    
-\ getline('.')[col('.')-2] =~# '[[:alnum:].-_#$]' ? '<C-x><C-o>' : '<Tab>'
-
-
-let g:OmniSharp_highlight_groups = {
-\ 'ClassName': 'Type',
-\}
-
-let g:OmniSharp_server_use_mono = 1
-autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
-
-let g:ale_completion_enabled = 1
-let g:ale_linters = {
-\  'python': ['pylsp'],
-\  'cs': ['OmniSharp']
-\}
-
-"-------fix--------------------
-autocmd! BufNewFile,BufRead *.frag,*.vert set ft=glsl
