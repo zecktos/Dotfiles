@@ -40,5 +40,5 @@ autocmd InsertLeave * highlight  CursorLineNr ctermfg=white ctermbg=none
 
 "-----NERDTree--------------
 "open NERDTree whenn opening vim without file
-command Tree NERDTreeToggle
-autocmd vimenter * if !argc() | NERDTree | endif
+"command Tree NERDTreeToggle
+"autocmd vimenter * if !argc() | NERDTree | endif
